@@ -1,54 +1,56 @@
-# StockFlow 📦
+# 📦 StockFlow
 
-Sistema de controle de estoque desenvolvido para praticar e demonstrar conhecimentos em desenvolvimento web, integração com banco de dados e criação de APIs.
+**Sistema de Controle de Estoque**
 
-## 📋 Sobre o projeto
+O StockFlow é um projeto desenvolvido para praticar conhecimentos em desenvolvimento web, integração com banco de dados e criação de APIs REST.
 
-O StockFlow é um sistema que permite gerenciar produtos e acompanhar as quantidades disponíveis em estoque. O objetivo é facilitar o controle de produtos, organizar as informações e registrar movimentações de entrada e saída.
+O objetivo é facilitar o gerenciamento de produtos, organizar categorias e acompanhar as movimentações de estoque.
 
-O projeto está sendo desenvolvido como parte dos meus estudos em programação e desenvolvimento de software.
+---
 
 ## 🚀 Funcionalidades
 
-- Cadastro de produtos.
-- Listagem de produtos cadastrados.
-- Edição de produtos.
-- Exclusão de produtos.
-- Cadastro e gerenciamento de categorias.
-- Registro de entradas e saídas de estoque.
-- Atualização automática das quantidades após movimentações.
-- Consulta de relatórios de estoque.
-- Identificação de produtos com estoque baixo.
-- Dashboard com informações gerais do estoque.
+- 📊 **Dashboard:** visualização de informações gerais do estoque.
+- 📦 **Produtos:** cadastro, consulta, edição e exclusão de produtos.
+- 🗂️ **Categorias:** organização dos produtos por categoria.
+- 🔄 **Movimentações:** registro de entradas e saídas de estoque.
+- 📉 **Estoque baixo:** identificação de produtos com poucas unidades disponíveis.
+- 📑 **Relatórios:** consulta de informações sobre o estoque.
+
+---
 
 ## 🛠️ Tecnologias utilizadas
 
-- **HTML5** — estrutura das páginas.
-- **CSS3** — estilização e layout.
-- **JavaScript** — interatividade e comunicação com o backend.
-- **Node.js** — execução do JavaScript no servidor.
-- **Express** — criação das rotas e da API.
-- **PostgreSQL** — armazenamento dos dados.
-- **pgAdmin** — gerenciamento do banco de dados.
-- **Git e GitHub** — versionamento e armazenamento do código.
+| Tecnologia | Utilização |
+|---|---|
+| HTML5 | Estrutura das páginas |
+| CSS3 | Estilização e layout |
+| JavaScript | Interatividade e comunicação com o backend |
+| Node.js | Execução do JavaScript no servidor |
+| Express | Criação de rotas e APIs |
+| PostgreSQL | Armazenamento dos dados |
+| pgAdmin | Gerenciamento do banco de dados |
+| Git e GitHub | Versionamento e hospedagem do código |
+
+---
 
 ## ⚙️ Como executar o projeto
 
-### 1. Pré-requisitos
+### 📋 Pré-requisitos
 
-Antes de começar, você precisa ter instalado:
+Antes de começar, instale:
 
 - [Node.js](https://nodejs.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [pgAdmin](https://www.pgadmin.org/)
 
-### 2. Clone o repositório
+### 1. Clone o repositório
 
 ```bash
 git clone URL_DO_SEU_REPOSITORIO
 ```
 
-Entre na pasta do projeto:
+### 2. Acesse a pasta do projeto
 
 ```bash
 cd controle_estoque
@@ -62,11 +64,11 @@ npm install
 
 ### 4. Configure o banco de dados
 
-No PostgreSQL, crie um banco de dados chamado `stockflow`.
+Crie um banco de dados chamado `stockflow` no PostgreSQL.
 
-Configure a conexão com o banco de dados no arquivo utilizado pelo projeto, como `db.js`, informando as credenciais locais do PostgreSQL.
+Configure a conexão com o banco de dados de acordo com as informações utilizadas no projeto.
 
-**Importante:** não compartilhe senhas do banco de dados nem envie credenciais para o GitHub.
+> **Importante:** não compartilhe senhas ou credenciais do banco de dados no GitHub.
 
 ### 5. Inicie o servidor
 
@@ -76,11 +78,13 @@ node server.js
 
 ### 6. Acesse o sistema
 
-Com o servidor funcionando, abra o navegador e acesse:
+Com o servidor em execução, abra o navegador e acesse:
 
 ```text
 http://localhost:3000
 ```
+
+---
 
 ## 📁 Estrutura do projeto
 
@@ -96,14 +100,19 @@ controle_estoque/
 └── README.md
 ```
 
-## 🎯 Objetivo
+---
 
-Desenvolver um sistema funcional para aplicar conhecimentos de desenvolvimento frontend e backend, criação de APIs REST, operações CRUD e integração com banco de dados relacional.
+## 🎯 Objetivo do projeto
+
+Aplicar conhecimentos de desenvolvimento frontend e backend, operações CRUD, criação de APIs REST e integração com banco de dados relacional.
+
+O StockFlow também faz parte da construção do meu portfólio de projetos na área de desenvolvimento de software.
+
+---
 
 ## 👨‍💻 Autor
 
 **Ricardo Prazeres Junkes**
 
-Estudante de Análise e Desenvolvimento de Sistemas, com interesse em desenvolvimento de software e aplicações web.
+Estudante de Análise e Desenvolvimento de Sistemas, com interesse em desenvolvimento web e desenvolvimento de software.
 
-- GitHub: [ricardopjunkes](https://github.com/ricardopjunkes)
