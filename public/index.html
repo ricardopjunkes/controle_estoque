@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFlow | Controle de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">S</span>
+            <h2>StockFlow</h2>
+        </div>
+
+        <p class="menu-label">MENU PRINCIPAL</p>
+
+        <nav>
+            <a href="#" class="menu-item active">▦ Dashboard</a>
+            <a href="#secaoProdutos" class="menu-item">📦 Produtos</a>
+            <a href="#" class="menu-item">▤ Categorias</a>
+            <a href="#" class="menu-item">↕ Movimentações</a>
+            <a href="#" class="menu-item">▥ Relatórios</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            Sistema de estoque
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="breadcrumb">Página inicial / Dashboard</p>
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="user-info">
+                <div class="user-avatar">A</div>
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Controle de estoque</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <p class="welcome-label">VISÃO GERAL</p>
+                <h2>Bem-vindo ao StockFlow</h2>
+                <p>Acompanhe seus produtos e movimentações de estoque.</p>
+            </div>
+            <span class="welcome-icon">📦</span>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Total de produtos</span>
+                    <span class="stat-icon blue">▦</span>
+                </div>
+                <h3 id="totalProdutos">--</h3>
+                <p>Produtos cadastrados</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Unidades em estoque</span>
+                    <span class="stat-icon green">📦</span>
+                </div>
+                <h3 id="totalUnidades">--</h3>
+                <p>Soma das quantidades</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Categorias</span>
+                    <span class="stat-icon purple">▤</span>
+                </div>
+                <h3 id="totalCategorias">--</h3>
+                <p>Categorias cadastradas</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Estoque baixo</span>
+                    <span class="stat-icon orange">!</span>
+                </div>
+                <h3 id="estoqueBaixo">--</h3>
+                <p>Produtos que precisam de atenção</p>
+            </article>
+        </section>
+
+        <section class="content-card" id="secaoProdutos">
+            <div class="section-heading">
+                <div>
+                    <h2>Gerenciar produtos</h2>
+                    <p>Consulte, cadastre e gerencie seus produtos.</p>
+                </div>
+
+                <div class="product-actions">
+                    <button id="atualizarDashboard" class="secondary-button">
+                        Atualizar dados
+                    </button>
+
+                    <button id="botaoNovoProduto" class="primary-button">
+                        + Novo produto
+                    </button>
+                </div>
+            </div>
+
+            <!-- Formulário de cadastro -->
+            <div id="formularioProduto" class="content-card" hidden>
+                <h2>Novo produto</h2>
+
+                <form id="formNovoProduto">
+                    <label for="nomeProduto">Nome do produto</label>
+                    <input
+                        type="text"
+                        id="nomeProduto"
+                        placeholder="Ex.: Teclado sem fio"
+                        required
+                    >
+
+                    <label for="precoProduto">Preço (R$)</label>
+                    <input
+                        type="number"
+                        id="precoProduto"
+                        min="0.01"
+                        step="0.01"
+                        placeholder="0,00"
+                        required
+                    >
+
+                    <label for="quantidadeProduto">Quantidade</label>
+                    <input
+                        type="number"
+                        id="quantidadeProduto"
+                        min="0"
+                        step="1"
+                        placeholder="0"
+                        required
+                    >
+
+                    <label for="categoriaProduto">Categoria</label>
+                    <select id="categoriaProduto" required>
+                        <option value="">Selecione uma categoria</option>
+                    </select>
+
+                    <div class="form-actions">
+                        <button type="submit" class="save-button">
+                            Salvar produto
+                        </button>
+
+                        <button
+                            type="button"
+                            id="botaoCancelarProduto"
+                            class="cancel-button"
+                        >
+                            Cancelar
+                        </button>
+                    </div>
+                </form>
+
+                <p id="mensagemProduto" class="message"></p>
+            </div>
+
+            <!-- Formulário de edição -->
+            <div id="formularioEdicao" class="content-card" hidden>
+                <h2>Editar produto</h2>
+
+                <form id="formEditarProduto">
+                    <input type="hidden" id="editarProdutoId">
+
+                    <label for="editarNomeProduto">Nome do produto</label>
+                    <input
+                        type="text"
+                        id="editarNomeProduto"
+                        required
+                    >
+
+                    <label for="editarPrecoProduto">Preço (R$)</label>
+                    <input
+                        type="number"
+                        id="editarPrecoProduto"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+
+                    <label for="editarQuantidadeProduto">Quantidade</label>
+                    <input
+                        type="number"
+                        id="editarQuantidadeProduto"
+                        min="0"
+                        step="1"
+                        required
+                    >
+
+                    <label for="editarCategoriaProduto">Categoria</label>
+                    <select id="editarCategoriaProduto" required>
+                        <option value="">Selecione uma categoria</option>
+                    </select>
+
+                    <div class="form-actions">
+                        <button type="submit" class="save-button">
+                            Salvar alterações
+                        </button>
+
+                        <button
+                            type="button"
+                            id="botaoCancelarEdicao"
+                            class="cancel-button"
+                        >
+                            Cancelar
+                        </button>
+                    </div>
+                </form>
+
+                <p id="mensagemEdicao" class="message"></p>
+            </div>
+
+            <!-- Pesquisa -->
+            <div class="search-container">
+                <input
+                    type="search"
+                    id="pesquisaProdutos"
+                    placeholder="Pesquisar produto pelo nome..."
+                    aria-label="Pesquisar produtos pelo nome"
+                >
+            </div>
+
+            <!-- Tabela de produtos -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelaProdutos">
+                        <tr>
+                            <td colspan="6" class="loading">
+                                Carregando produtos...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="mensagemDashboard" class="message"></p>
+        </section>
+
+        <footer>
+            StockFlow &copy; 2026 — Sistema de Controle de Estoque
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
