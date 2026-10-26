@@ -1,0 +1,109 @@
+# StockFlow 📦
+
+Sistema de controle de estoque desenvolvido para praticar e demonstrar conhecimentos em desenvolvimento web, integração com banco de dados e criação de APIs.
+
+## 📋 Sobre o projeto
+
+O StockFlow é um sistema que permite gerenciar produtos e acompanhar as quantidades disponíveis em estoque. O objetivo é facilitar o controle de produtos, organizar as informações e registrar movimentações de entrada e saída.
+
+O projeto está sendo desenvolvido como parte dos meus estudos em programação e desenvolvimento de software.
+
+## 🚀 Funcionalidades
+
+- Cadastro de produtos.
+- Listagem de produtos cadastrados.
+- Edição de produtos.
+- Exclusão de produtos.
+- Cadastro e gerenciamento de categorias.
+- Registro de entradas e saídas de estoque.
+- Atualização automática das quantidades após movimentações.
+- Consulta de relatórios de estoque.
+- Identificação de produtos com estoque baixo.
+- Dashboard com informações gerais do estoque.
+
+## 🛠️ Tecnologias utilizadas
+
+- **HTML5** — estrutura das páginas.
+- **CSS3** — estilização e layout.
+- **JavaScript** — interatividade e comunicação com o backend.
+- **Node.js** — execução do JavaScript no servidor.
+- **Express** — criação das rotas e da API.
+- **PostgreSQL** — armazenamento dos dados.
+- **pgAdmin** — gerenciamento do banco de dados.
+- **Git e GitHub** — versionamento e armazenamento do código.
+
+## ⚙️ Como executar o projeto
+
+### 1. Pré-requisitos
+
+Antes de começar, você precisa ter instalado:
+
+- [Node.js](https://nodejs.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [pgAdmin](https://www.pgadmin.org/)
+
+### 2. Clone o repositório
+
+```bash
+git clone URL_DO_SEU_REPOSITORIO
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd controle_estoque
+```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Configure o banco de dados
+
+No PostgreSQL, crie um banco de dados chamado `stockflow`.
+
+Configure a conexão com o banco de dados no arquivo utilizado pelo projeto, como `db.js`, informando as credenciais locais do PostgreSQL.
+
+**Importante:** não compartilhe senhas do banco de dados nem envie credenciais para o GitHub.
+
+### 5. Inicie o servidor
+
+```bash
+node server.js
+```
+
+### 6. Acesse o sistema
+
+Com o servidor funcionando, abra o navegador e acesse:
+
+```text
+http://localhost:3000
+```
+
+## 📁 Estrutura do projeto
+
+```text
+controle_estoque/
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── db.js
+├── server.js
+├── package.json
+└── README.md
+```
+
+## 🎯 Objetivo
+
+Desenvolver um sistema funcional para aplicar conhecimentos de desenvolvimento frontend e backend, criação de APIs REST, operações CRUD e integração com banco de dados relacional.
+
+## 👨‍💻 Autor
+
+**Ricardo Prazeres Junkes**
+
+Estudante de Análise e Desenvolvimento de Sistemas, com interesse em desenvolvimento de software e aplicações web.
+
+- GitHub: [ricardopjunkes](https://github.com/ricardopjunkes)
