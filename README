@@ -64,11 +64,10 @@ npm install
 
 ### 4. Configure o banco de dados
 
-Crie um banco de dados chamado `stockflow` no PostgreSQL.
+Crie um banco de dados chamado `Controle de estoque` no PostgreSQL.
 
 Configure a conexão com o banco de dados de acordo com as informações utilizadas no projeto.
 
-> **Importante:** não compartilhe senhas ou credenciais do banco de dados no GitHub.
 
 ### 5. Inicie o servidor
 
